@@ -18,20 +18,22 @@ def start():
         elif(a<31):
             a+=1
             print("Next date is %d/%d/%d"%(a,b,c))
-            
+
         elif(a==31):
             a=1
             b+=1
             print("Next date is %d/%d/%d" % (a, b, c))
 
-    elif(b==1 and a==31):
-        b+=1
-        a=1
-        print("Next date is %d/%d/%d"%(a,b,c))
+
 
     elif(b==2 and a<28):
         a+=1
         print("Next date is %d/%d/%d"%(a,b,c))
+
+    elif (b == 2 and a==28 and c%4!=0):
+        a=1
+        b+=1
+        print("Next date is %d/%d/%d" % (a, b, c))
 
     elif(c%100==0 and b==2):
         if(c%400==0 and a==29):
@@ -85,4 +87,11 @@ def start():
         print("Taking you back to options")
         start()
 start()
+
+
+
+
+
+
+
 
