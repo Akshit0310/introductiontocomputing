@@ -18,6 +18,11 @@ def start():
         elif(a<31):
             a+=1
             print("Next date is %d/%d/%d"%(a,b,c))
+            
+        elif(a==31):
+            a=1
+            b+=1
+            print("Next date is %d/%d/%d" % (a, b, c))
 
     elif(b==1 and a==31):
         b+=1
